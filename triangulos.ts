@@ -1,10 +1,14 @@
 
 const analyzeValues = (valuesList: number[]) => {
+    // Quantidade de valores igual a 3
+    if (valuesList.length !== 3)
+        return "Tamanho da lista inválido"
+
     // Valores válidos: maiores que 0
     const invalidValues = valuesList.filter((value) => value <= 0);
 
     if(invalidValues.length > 0)
-        return "Valores Inválidos";
+        return "Valores inválidos";
 
     // Verificar se é um triângulo válido
     const [a, b, c] = valuesList;
