@@ -1,0 +1,44 @@
+{
+    "name": "software-testing",
+    "version": "1.0.0",
+    "description": "A structured collection of algorithms implemented in TypeScript with comprehensive automated tests using Jest, focusing on edge cases, equivalence classes, and software testing best practices.",
+    "main": "dist/index.js",
+    "scripts": {
+        "start:dev": "tsx watch src/index.ts",
+        "build": "tsup src/index.ts --clean --format cjs,esm",
+        "start:build": "node dist/index.js",
+        "test": "jest",
+        "test:coverage": "jest --coverage",
+        "test:ui": "jest --coverage && open coverage/lcov-report/index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DevJoaoVitorB/software-testing.git"
+    },
+    "keywords": [
+        "typescript",
+        "jest",
+        "testing",
+        "automated-tests",
+        "algorithms",
+        "unit-testing",
+        "software-testing",
+        "nodejs"
+    ],
+    "author": "João Vitor B. S. - DevJoaoVitorB",
+    "license": "ISC",
+    "type": "module",
+    "bugs": {
+        "url": "https://github.com/DevJoaoVitorB/software-testing/issues"
+    },
+    "homepage": "https://github.com/DevJoaoVitorB/software-testing#readme",
+    "dependencies": {
+        "@types/jest": "^30.0.0",
+        "@types/node": "^25.5.0",
+        "jest": "^30.3.0",
+        "ts-jest": "^29.4.6",
+        "tsup": "^8.5.1",
+        "tsx": "^4.21.0",
+        "typescript": "^6.0.2"
+    }
+}
