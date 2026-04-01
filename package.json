@@ -7,9 +7,9 @@
         "start:dev": "tsx watch src/index.ts",
         "build": "tsup src/index.ts --clean --format cjs,esm",
         "start:build": "node dist/index.js",
-        "test": "jest",
-        "test:coverage": "jest --coverage",
-        "test:ui": "jest --coverage && open coverage/lcov-report/index.html"
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+        "test:coverage": "npm run test -- --coverage",
+        "test:ui": "npm run test:coverage && start coverage/lcov-report/index.html"
     },
     "repository": {
         "type": "git",
@@ -32,11 +32,11 @@
         "url": "https://github.com/DevJoaoVitorB/software-testing/issues"
     },
     "homepage": "https://github.com/DevJoaoVitorB/software-testing#readme",
-    "dependencies": {
+    "devDependencies": {
         "@types/jest": "^30.0.0",
         "@types/node": "^25.5.0",
         "jest": "^30.3.0",
-        "ts-jest": "^29.4.6",
+        "ts-jest": "^29.4.8",
         "tsup": "^8.5.1",
         "tsx": "^4.21.0",
         "typescript": "^6.0.2"
