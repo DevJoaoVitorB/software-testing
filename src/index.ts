@@ -1,1 +1,1 @@
-export { classifyTriangle } from '@/algorithms/triangle_classification.js';
+export { classifyTriangle } from '@/algorithms/triangle-classification.js';
